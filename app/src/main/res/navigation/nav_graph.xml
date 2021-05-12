@@ -3,13 +3,23 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/nav_graph"
-            app:startDestination="@id/FirstFragment">
+            app:startDestination="@id/ListFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/ListFragment"
         android:name="ch.feosoft.aoebuildtrainer.BuildOrderListFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_build_order">
+        android:label="@string/build_order_list_label"
+        tools:layout="@layout/fragment_build_order_list">
+        <action
+            android:id="@+id/action_ListFragment_to_AddFragment"
+            app:destination="@id/AddFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AddFragment"
+        android:name="ch.feosoft.aoebuildtrainer.BuildOrderAddFragment"
+        android:label="@string/build_order_add_label"
+        tools:layout="@layout/fragment_build_order_add">
     </fragment>
 
 </navigation>
