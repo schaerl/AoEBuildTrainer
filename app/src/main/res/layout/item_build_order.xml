@@ -6,7 +6,6 @@
     android:focusable="true"
     android:layout_width="match_parent"
     android:layout_height="@dimen/list_item_height"
-    android:layout_marginHorizontal="@dimen/list_margin"
     android:layout_marginVertical="@dimen/list_margin_s"
     android:gravity="center_vertical"
     app:strokeWidth="1dp"

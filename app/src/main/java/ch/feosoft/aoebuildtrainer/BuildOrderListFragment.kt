@@ -7,7 +7,6 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ch.feosoft.aoebuildtrainer.adapter.BuildOrderAdapter
-import ch.feosoft.aoebuildtrainer.data.DataSource
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 /**
@@ -31,7 +30,7 @@ class BuildOrderListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val recycler = view.findViewById<RecyclerView>(R.id.build_order_recycler_view)
         recycler.layoutManager = LinearLayoutManager(requireContext())
-        recycler.adapter = BuildOrderAdapter(DataSource.getData())
+        recycler.adapter = BuildOrderAdapter()
 
         val fab = view.findViewById<FloatingActionButton>(R.id.fab)
         fab.setOnClickListener { v ->

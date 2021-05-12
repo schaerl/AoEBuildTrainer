@@ -7,23 +7,25 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import ch.feosoft.aoebuildtrainer.R
-import ch.feosoft.aoebuildtrainer.model.BuildOrder
+import ch.feosoft.aoebuildtrainer.service.BuildOrderService
 
-class BuildOrderAdapter(private val dataSet: List<BuildOrder>) : RecyclerView.Adapter<BuildOrderAdapter.ViewHolder>() {
+class BuildOrderAdapter : RecyclerView.Adapter<BuildOrderAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.build_order_item_layout, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_build_order, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.textView.text = dataSet[position].name
-        holder.imgView.setImageResource(dataSet[position].iconResourceId)
-        holder.subtitleView.text = dataSet[position].subtitle
+        // TODO: Replace call to buildOrderService with a reference to the list, or similar. So we don't have to
+        //  constantly reload like we do now
+        holder.textView.text = BuildOrderService.getAllBuildOrders()[position].name
+        holder.imgView.setImageResource(BuildOrderService.getAllBuildOrders()[position].iconResourceId)
+        holder.subtitleView.text = BuildOrderService.getAllBuildOrders()[position].subtitle
     }
 
     override fun getItemCount(): Int {
-        return dataSet.size
+        return BuildOrderService.getAllBuildOrders().size
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {

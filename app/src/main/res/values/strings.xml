@@ -2,7 +2,11 @@
     <string name="app_name">AoE Build Trainer</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="build_order_list_label">First Fragment</string>
-    <string name="build_order_add_label">New Fragment</string>
+    <string name="build_order_list_label">AoE II Build Trainer</string>
+    <string name="build_order_add_label">New Build Order</string>
     <string name="add_new_build_order">Add new build order</string>
+    <string name="save_new_build_order">Save new Build Order</string>
+    <string name="new_build_order_name_label">Name</string>
+    <string name="error_name_required">Name must not be emtpy!</string>
+    <string name="build_order_saved_successfully">Build Order saved successfully</string>
 </resources>

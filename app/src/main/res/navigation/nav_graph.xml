@@ -20,6 +20,9 @@
         android:name="ch.feosoft.aoebuildtrainer.BuildOrderAddFragment"
         android:label="@string/build_order_add_label"
         tools:layout="@layout/fragment_build_order_add">
+        <action
+            android:id="@+id/action_AddFragment_to_ListFragment"
+            app:destination="@id/ListFragment" />
     </fragment>
 
 </navigation>
